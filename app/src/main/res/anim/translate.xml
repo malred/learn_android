@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- pop win 动画 -->
+    <!--
+        translate: 移动动画
+        fromXDelta: 0 -> toXDelta: 0 表示起始和结束位置不变
+    -->
+    <translate
+        android:duration="2000"
+        android:fromXDelta="0"
+        android:fromYDelta="300"
+        android:toXDelta="0"
+        android:toYDelta="0"></translate>
+</set>

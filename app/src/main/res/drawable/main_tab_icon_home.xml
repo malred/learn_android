@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中的图 -->
+    <item android:drawable="@drawable/tabbar_home_pressed" android:state_selected="true" />
+    <!-- 按下的图 -->
+    <item android:drawable="@drawable/tabbar_home_pressed" android:state_pressed="true" />
+    <!-- 默认图(触发状态从上到下找，所以默认的放最下面，防止默认的被应用到状态) -->
+    <item android:drawable="@drawable/tabbar_home" />
+</selector>

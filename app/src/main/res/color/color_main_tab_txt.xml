@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选择后的颜色 -->
+    <item android:color="#4dd0c8" android:state_selected="true" />
+    <!-- 按下时的颜色 -->
+    <item android:color="#4dd0c8" android:state_pressed="true" />
+    <!-- 默认(触发状态从上到下找，所以默认的放最下面，防止默认的被应用到状态) -->
+    <item android:color="#cccccc" />
+</selector>
