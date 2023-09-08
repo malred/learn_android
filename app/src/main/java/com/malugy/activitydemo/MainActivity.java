@@ -40,6 +40,30 @@ public class MainActivity extends AppCompatActivity {
             case R.id.button7:
                 startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
                 break;
+            case R.id.button8:
+                startActivity(new Intent(MainActivity.this, NetworkActivity.class));
+                break;
+            case R.id.button9:
+                startActivity(new Intent(MainActivity.this, HandlerActivity.class));
+                break;
+            case R.id.button10:
+                startActivity(new Intent(MainActivity.this, DownloadActivity.class));
+                break;
+            case R.id.button11:
+                startActivity(new Intent(MainActivity.this, CutdownTime.class));
+                break;
+            case R.id.button12:
+                startActivity(new Intent(MainActivity.this, DiglettActivity.class));
+                break;
+            case R.id.button13:
+                startActivity(new Intent(MainActivity.this, AsyncTaskActivity.class));
+                break;
+            case R.id.button14:
+                startActivity(new Intent(MainActivity.this, AsyncDownloadActivity.class));
+                break;
+            case R.id.button15:
+                startActivity(new Intent(MainActivity.this, ListActivity.class));
+                break;
         }
     }
 
