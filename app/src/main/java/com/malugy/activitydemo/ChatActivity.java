@@ -10,12 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChatActivity extends AppCompatActivity {
 
+    private static ViewHolder viewHolder;
     private ListView listView;
 
     @Override
@@ -36,7 +38,7 @@ public class ChatActivity extends AppCompatActivity {
         chatMessages.add(new ChatMessage(
                 2, 1, "小军", "8:23", "热死啦", false));
 
-        listView.setAdapter();
+        listView.setAdapter(new ChatMessageAdapter(chatMessages, this));
     }
 
     public class ChatMessage {
@@ -154,12 +156,33 @@ public class ChatActivity extends AppCompatActivity {
 
             if (view == null) {
                 if (chatMessage.isComeMsg()) {
-                    view = LayoutInflater.from(context).inflate(R.layout.);
+                    view = LayoutInflater.from(context)
+                            .inflate(R.layout.chat_left, null);
                 } else {
-                    view = LayoutInflater.from(context).inflate(R.layout.);
+                    view = LayoutInflater.from(context)
+                            .inflate(R.layout.chat_right, null);
                 }
+                viewHolder = new ViewHolder();
+                viewHolder.chat_content = view.findViewById(R.id.chat_content);
+                viewHolder.chat_date = view.findViewById(R.id.chat_date);
+                viewHolder.chat_user = view.findViewById(R.id.chat_name);
+
+                view.setTag(viewHolder);
+            } else {
+                viewHolder = (ViewHolder) view.getTag();
             }
-            return null;
+
+            viewHolder.chat_date.setText(chatMessage.date);
+            viewHolder.chat_content.setText(chatMessage.content);
+            viewHolder.chat_user.setText(chatMessage.name);
+
+            return view;
         }
+    }
+
+    public static class ViewHolder {
+        private TextView chat_date;
+        private TextView chat_content;
+        private TextView chat_user;
     }
 }

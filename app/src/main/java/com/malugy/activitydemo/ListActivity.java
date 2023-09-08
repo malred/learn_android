@@ -23,6 +23,9 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button16:
                 startActivity(new Intent(ListActivity.this, RequestDataActivity.class));
                 break;
+            case R.id.button17:
+                startActivity(new Intent(ListActivity.this, ChatActivity.class));
+                break;
         }
     }
 }
